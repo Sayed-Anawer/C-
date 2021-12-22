@@ -12,47 +12,42 @@ public:
     string Type;
     int CarCC;
     list<string> RoadPermitCountry;
+
+    Cars(string brandName, string modelName, string type, int carcc)
+    {
+        BrandName = brandName;
+        ModelName = modelName;
+        Type = type;
+        CarCC = carcc;
+        }
+
+    void getInfoOfCar()
+    {
+        cout << "Car Name: " << ModelName << endl;
+        cout << "Type: " << Type << endl;
+        cout << "Brand Name: " << BrandName << endl;
+        cout << "Car CC: " << CarCC << "hp" << endl;
+        cout << "Countries : " << endl;
+        for (string country : RoadPermitCountry)
+        {
+            cout << country << endl;
+        }
+    }
 };
 
 int main()
 {
-    Cars myCar;
+    Cars myCar("Ford", "Mustang Gt", "Sports Car", 1230);
+    Cars myCar2("Audi", "Q3", "SUV", 150);
 
-    myCar.BrandName = "Ford";
-    myCar.ModelName = "Mustang Gt";
-    myCar.Type = "Sports Car";
-    myCar.CarCC = 1230;
     myCar.RoadPermitCountry.push_back("Bangladesh");
     myCar.RoadPermitCountry.push_back("USA");
     myCar.RoadPermitCountry.push_back("Canada");
 
-    cout << "Car Name: " << myCar.ModelName << endl;
-    cout << "Type: " << myCar.Type << endl;
-    cout << "Brand Name: " << myCar.BrandName << endl;
-    cout << "Car CC: " << myCar.CarCC << "hp" << endl;
-    cout << "Countries : " << endl;
-    for (string country : myCar.RoadPermitCountry)
-    {
-        cout << country << endl;
-    }
-
-    Cars myCar2;
-
-    myCar2.BrandName = "AUDI";
-    myCar2.ModelName = "Q3";
-    myCar2.Type = "SUV";
-    myCar2.CarCC = 150;
     myCar2.RoadPermitCountry.push_back("Bangladesh");
     myCar2.RoadPermitCountry.push_back("USA");
     myCar2.RoadPermitCountry.push_back("Canada");
 
-    cout << "Car Name: " << myCar2.ModelName << endl;
-    cout << "Type: " << myCar2.Type << endl;
-    cout << "Brand Name: " << myCar2.BrandName << endl;
-    cout << "Car CC: " << myCar2.CarCC << "hp" << endl;
-    cout << "Countries : " << endl;
-    for (string country : myCar2.RoadPermitCountry)
-    {
-        cout << country << endl;
-    }
+    myCar.getInfoOfCar();
+    myCar2.getInfoOfCar();
 }
