@@ -35,7 +35,7 @@ int main(){
         // Reverse Rectangle Shape 
         for(int i = height; i>=1; i--){
              for(int j = 1; j<=i; j++){
-                cout << setw(2) << symbol;
+        cout << setw(2) << symbol;
         }
         cout << endl;
     }

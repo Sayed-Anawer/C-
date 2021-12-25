@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "algorithm": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "xmemory0": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp"
+    }
+}
